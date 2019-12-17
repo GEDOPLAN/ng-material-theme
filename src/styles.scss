@@ -1,0 +1,132 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// original
+$ng-materials-theme-primary: mat-palette($mat-indigo);
+$ng-materials-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+$ng-materials-theme-warn: mat-palette($mat-red);
+
+$ng-materials-theme-theme: mat-light-theme(
+  $ng-materials-theme-primary,
+  $ng-materials-theme-accent,
+  $ng-materials-theme-warn
+);
+@include angular-material-theme($ng-materials-theme-theme);
+
+// custom 01
+$theme01-primary: mat-palette($mat-orange, 100, 50, 900);
+$theme01-accent: mat-palette($mat-brown);
+$theme01-warn: mat-palette($mat-red);
+
+$theme01-theme: mat-light-theme($theme01-primary, $theme01-accent, $theme01-warn);
+@include angular-material-theme($theme01-theme);
+
+// custom 02
+$palette01: (
+  50: #ebf0f4,
+  100: #ccd9e3,
+  200: #aac0d0,
+  300: #88a6bd,
+  400: #6f93ae,
+  500: #5580a0,
+  600: #4e7898,
+  700: #446d8e,
+  800: #3b6384,
+  900: #2a5073,
+  A100: #b9dcff,
+  A200: #86c3ff,
+  A400: #53a9ff,
+  A700: #3a9cff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$palette02: (
+  50: #f9f1ea,
+  100: #f0dcca,
+  200: #e6c5a6,
+  300: #dbad82,
+  400: #d49c68,
+  500: #cc8a4d,
+  600: #c78246,
+  700: #c0773d,
+  800: #b96d34,
+  900: #ad5a25,
+  A100: #fff2eb,
+  A200: #ffd2b8,
+  A400: #ffb185,
+  A700: #ffa16b,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$palette03: (
+  50: #eee4e9,
+  100: #d5bbc8,
+  200: #ba8da3,
+  300: #9e5f7e,
+  400: #893d63,
+  500: #741b47,
+  600: #6c1840,
+  700: #611437,
+  800: #57102f,
+  900: #440820,
+  A100: #ff7aa7,
+  A200: #ff4786,
+  A400: #ff1464,
+  A700: #fa0055,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$theme02-primary: mat-palette($palette01);
+$theme02-accent: mat-palette($palette02);
+$theme02-warn: mat-palette($palette03);
+
+$theme02: mat-light-theme($theme02-primary, $theme02-accent, $theme02-warn);
+@include angular-material-theme($theme02);
+
+// set theme for separate componentes
+@include mat-badge-theme($ng-materials-theme-theme);

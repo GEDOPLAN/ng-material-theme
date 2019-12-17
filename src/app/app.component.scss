@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  padding: 2em 5em;
+
+  display: flex;
+  flex-direction: column;
+
+  button {
+    width: 200px;
+    flex: 0 0 auto;
+    margin-top: 2em;
+  }
+}
