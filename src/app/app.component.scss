@@ -1,9 +1,13 @@
+@import 'styles_theme.scss';
+
 :host {
   display: block;
   padding: 2em 5em;
 
   display: flex;
   flex-direction: column;
+
+  background-color: mat-color($theme02-primary);
 
   button {
     width: 200px;
