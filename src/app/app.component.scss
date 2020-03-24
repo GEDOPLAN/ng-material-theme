@@ -1,4 +1,4 @@
-@import 'styles_theme.scss';
+@import 'styles_variables.scss';
 
 :host {
   display: block;
@@ -6,12 +6,31 @@
 
   display: flex;
   flex-direction: column;
+}
 
-  background-color: mat-color($theme02-primary);
+button {
+  width: 200px;
+  flex: 0 0 auto;
+  margin-top: 2em;
+}
 
-  button {
-    width: 200px;
-    flex: 0 0 auto;
-    margin-top: 2em;
-  }
+header {
+  border-bottom: 2px solid $primary-color;
+  margin-bottom: 1em;
+}
+
+footer {
+  margin-top: 1em;
+  padding: 0.5em;
+  color: $accent-contrast-color;
+  background-color: $accent-color;
+}
+
+mat-form-field {
+  max-width: 200px;
+}
+
+h2 {
+  font-size: $font-title-size;
+  font-family: $font-title-family;
 }

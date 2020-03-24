@@ -10,15 +10,13 @@ $ng-materials-theme-theme: mat-light-theme(
   $ng-materials-theme-accent,
   $ng-materials-theme-warn
 );
-@include angular-material-theme($ng-materials-theme-theme);
 
 // custom 01
-$theme01-primary: mat-palette($mat-orange, 100, 50, 900);
-$theme01-accent: mat-palette($mat-brown);
-$theme01-warn: mat-palette($mat-red);
+$palette01-primary: mat-palette($mat-orange, 100, 50, 900);
+$palette01-accent: mat-palette($mat-brown);
+$palette01-warn: mat-palette($mat-red);
 
-$theme01-theme: mat-light-theme($theme01-primary, $theme01-accent, $theme01-warn);
-@include angular-material-theme($theme01-theme);
+$theme01: mat-light-theme($palette01-primary, $palette01-accent, $palette01-warn);
 
 // custom 02
 $palette01: (
@@ -120,8 +118,25 @@ $palette03: (
   )
 );
 
-$theme02-primary: mat-palette($palette01, 500, 50, 900);
-$theme02-accent: mat-palette($palette02);
-$theme02-warn: mat-palette($palette03);
+$palette02-primary: mat-palette($palette01, 500, 50, 900);
+$palette02-accent: mat-palette($palette02);
+$palette02-warn: mat-palette($palette03);
 
-$theme02: mat-light-theme($theme02-primary, $theme02-accent, $theme02-warn);
+$theme02: mat-light-theme($palette02-primary, $palette02-accent, $palette02-warn);
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, "Helvetica Neue", sans-serif',
+  $display-4: mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(34px, 40px, 400),
+  $headline: mat-typography-level(24px, 32px, 400),
+  $title: mat-typography-level(50px, 32px, 500, '"Comic Sans MS", Roboto, Arial'),
+  $subheading-2: mat-typography-level(16px, 28px, 400),
+  $subheading-1: mat-typography-level(15px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400)
+);

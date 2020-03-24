@@ -1,3 +1,16 @@
+<header>
+  <h2>
+    Angular Materials Theming
+  </h2>
+</header>
+<mat-form-field>
+  <mat-label>Datum</mat-label>
+  <input matInput [matDatepicker]="datePicker" (focus)="datePicker.open()">
+  <mat-datepicker #datePicker></mat-datepicker>
+</mat-form-field>
+
+<app-color-palette></app-color-palette>
+
 <button mat-raised-button color="primary" matBadge="8" matBadgePosition="after" matBadgeColor="accent"
   class="dark-themes">
   primary-accent
@@ -10,3 +23,6 @@
     account_balance
   </i>
 </button>
+<footer>
+  by GEDOPLAN
+</footer>

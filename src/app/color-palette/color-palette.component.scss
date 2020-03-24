@@ -1,0 +1,48 @@
+@import '~@angular/material/theming';
+@import 'theme/styles_theme.scss';
+
+$palette-primary: $palette02-primary;
+
+.p900 {
+  background-color: mat-color($palette-primary, 900);
+}
+.p800 {
+  background-color: mat-color($palette-primary, 800);
+}
+.p700 {
+  background-color: mat-color($palette-primary, 700);
+}
+.p600 {
+  background-color: mat-color($palette-primary, 600);
+}
+.p500 {
+  background-color: mat-color($palette-primary, 500);
+}
+.p400 {
+  background-color: mat-color($palette-primary, 400);
+}
+.p300 {
+  background-color: mat-color($palette-primary, 300);
+}
+.p200 {
+  background-color: mat-color($palette-primary, 200);
+}
+.p100 {
+  background-color: mat-color($palette-primary, 100);
+}
+.p50 {
+  background-color: mat-color($palette-primary, 50);
+}
+
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}

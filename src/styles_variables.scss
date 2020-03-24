@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+@import 'theme/styles_theme.scss';
+
+$palette-primary: $palette02-primary;
+$palette-accent: $palette02-accent;
+$palette-warn: $palette02-warn;
+
+$primary-color: mat-color($palette-primary, 400);
+$accent-color: mat-color($palette-accent, 400);
+$warn-color: mat-color($palette-warn, 400);
+
+$primary-contrast-color: mat-color($palette-primary, contrast(400));
+$accent-contrast-color: mat-color($palette-accent, contrast(400));
+$warn-contrast-color: mat-color($palette-warn, contrast(400));
+
+$font-family: mat-font-family($custom-typography);
+
+$font-title-size: mat-font-size($custom-typography, title);
+$font-title-line-height: mat-line-height($custom-typography, title);
+$font-title-weight: mat-font-weight($custom-typography, title);
+$font-title-family: mat-font-family($custom-typography, title);
+
+// mixin to use all font attributes
+// .demo{
+//   @include mat-typography-level-to-styles($custom-typography, title);
+// }

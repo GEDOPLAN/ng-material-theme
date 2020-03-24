@@ -1,6 +1,16 @@
-@import 'styles_theme.scss';
+@import 'theme/styles_theme.scss';
+@import 'styles_variables.scss';
+
 @include mat-core();
 @include angular-material-theme($theme02);
 
 // set theme for separate componentes
-@include mat-badge-theme($ng-materials-theme-theme);
+// @include mat-badge-theme($ng-materials-theme-theme);
+
+// alternative to pass it to mat-core
+@include angular-material-typography($custom-typography);
+
+// pragmatic solution to change color of selected date in date picker
+.mat-calendar-body-selected {
+  background-color: green;
+}
