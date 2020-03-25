@@ -11,4 +11,7 @@
 }
 
 @mixin ng-lib-typography($config) {
+  lib-panel div.body {
+    font-size: mat-font-size($config, title);
+  }
 }
