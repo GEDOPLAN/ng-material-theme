@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@mixin ng-lib-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  lib-panel div.body {
+    border-top-color: mat-color($primary, 400);
+    border-bottom-color: mat-color($accent, 400);
+  }
+}
+
+@mixin ng-lib-typography($config) {
+}

@@ -13,6 +13,7 @@ import {
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ColorPaletteComponent } from './color-palette/color-palette.component';
+import { NgLibModule } from 'projects/ng-lib/src/public-api';
 
 @NgModule({
   declarations: [AppComponent, ColorPaletteComponent],
@@ -24,7 +25,8 @@ import { ColorPaletteComponent } from './color-palette/color-palette.component';
     MatButtonModule,
     MatBadgeModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    NgLibModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'de-DE' }],
   bootstrap: [AppComponent]

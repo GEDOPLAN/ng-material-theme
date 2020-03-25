@@ -1,5 +1,12 @@
 @import 'theme/styles_theme.scss';
 @import 'styles_variables.scss';
+@import '../projects/ng-lib/src/lib/assets/ng-lib-theme.scss';
+
+//default themes:
+// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+// @import '@angular/material/prebuilt-themes/purple-green.css';
 
 @include mat-core();
 @include angular-material-theme($theme02);
@@ -14,3 +21,7 @@
 .mat-calendar-body-selected {
   background-color: green;
 }
+
+// theme custom lib
+@include ng-lib-theme($theme02);
+@include ng-lib-typography($custom-typography);

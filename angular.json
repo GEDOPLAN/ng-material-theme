@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "ng-lib": {
+      "projectType": "library",
+      "root": "projects/ng-lib",
+      "sourceRoot": "projects/ng-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-lib/tsconfig.lib.json",
+            "project": "projects/ng-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-lib/src/test.ts",
+            "tsConfig": "projects/ng-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-lib/tsconfig.lib.json",
+              "projects/ng-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-materials-theme"
