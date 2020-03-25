@@ -1,6 +1,8 @@
 @import 'theme/styles_theme.scss';
 @import 'styles_variables.scss';
-@import '../projects/ng-lib/src/lib/assets/ng-lib-theme.scss';
+
+// import from workspace, in a "real" lib we import it via node_modues-Folder: @import '~ng-lib/assets/ng-lib-theme.scss'
+@import '../projects/ng-lib/assets/ng-lib-theme.scss';
 
 //default themes:
 // @import '@angular/material/prebuilt-themes/deeppurple-amber.css';

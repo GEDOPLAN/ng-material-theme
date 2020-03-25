@@ -3,5 +3,6 @@
   "dest": "../../dist/ng-lib",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["assets/*"]
 }
